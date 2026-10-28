@@ -1,0 +1,30 @@
+---
+title: "GitHub Advanced"
+author: "Kaitlin Powell"
+format: html
+execute:
+  echo: false
+---
+
+## Setup
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+## Exploring the Iris Dataset
+
+This plot shows the relationship between sepal length and petal length for three different iris species.
+
+```{r}
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+  geom_point(size = 3, alpha = 0.7) +
+  labs(
+    title = "Iris Flower Measurements",
+    x = "Sepal Length (cm)",
+    y = "Petal Length (cm)",
+    color = "Species"
+  ) +
+  theme_minimal()
+```
